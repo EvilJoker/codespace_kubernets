@@ -149,10 +149,12 @@ memcached_controller.go
 
 + 执行 make manifests
 
-### 3 编译
+### 6 编译
++ Makefile 中  IMG ?= $(IMAGE_TAG_BASE):$(VERSION) 是镜像
++ make docker-build 编译镜像
+> devcontainer 中无法编译，需要在主机上运行，先下载 Dockerfile的基础镜像
 
-
-### 4 部署
+### 7 部署
 
 
 
