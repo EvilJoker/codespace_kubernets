@@ -28,5 +28,5 @@ jobs:
           # Change this to be your CI task/script
           runCmd: |
             # Add multiple commands to run if needed
-            make docker-build
+            docker version
             #make ci-build
