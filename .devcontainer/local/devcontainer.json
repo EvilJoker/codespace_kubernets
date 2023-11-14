@@ -4,22 +4,6 @@
 	"name": "k8sdev",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": { "dockerfile": "Dockerfile" },
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-			"plugins": "ssh-agent npm",
-			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
-			"username": "root"
-		},
-		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
-		"ghcr.io/audacioustux/devcontainers/operator-sdk:1": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {
-			"moby": true,
-			"azureDnsAutoDetection": true,
-			"installDockerBuildx": true,
-			"version": "latest",
-			"dockerDashComposeVersion": "v1"
-		}
-	},
 	"containerEnv": {
 		"GOPROXY":"https://goproxy.cn",
 		"https_proxy": "${localEnv:https_proxy}",
@@ -28,7 +12,7 @@
 		"all_proxy": "${localEnv:all_proxy}",
 		"ftp_proxy": "${localEnv:ftp_proxy}"
 	},
-	"postStartCommand": "bash /workspaces/codespace_kubernets/.devcontainer/post_start.sh",
+	"postStartCommand": "echo hello",
 	"runArgs": [
 		"--network",
 		"host"
